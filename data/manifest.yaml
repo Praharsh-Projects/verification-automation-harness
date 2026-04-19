@@ -1,0 +1,40 @@
+{
+  "executable": "build/limit_checker",
+  "requirements": [
+    {
+      "id": "SYS-001",
+      "text": "The checker shall return OK when the value is within limits."
+    },
+    {
+      "id": "SYS-002",
+      "text": "The checker shall return LOW when the value is below the lower bound."
+    },
+    {
+      "id": "SYS-003",
+      "text": "The checker shall return HIGH when the value exceeds the upper bound."
+    }
+  ],
+  "tests": [
+    {
+      "id": "TC-001",
+      "requirement_ids": ["SYS-001"],
+      "args": [10, 5, 20],
+      "expected_stdout": "OK",
+      "expected_exit_code": 0
+    },
+    {
+      "id": "TC-002",
+      "requirement_ids": ["SYS-002"],
+      "args": [2, 5, 20],
+      "expected_stdout": "LOW",
+      "expected_exit_code": 2
+    },
+    {
+      "id": "TC-003",
+      "requirement_ids": ["SYS-003"],
+      "args": [22, 5, 20],
+      "expected_stdout": "HIGH",
+      "expected_exit_code": 3
+    }
+  ]
+}
