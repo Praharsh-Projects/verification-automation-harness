@@ -18,7 +18,7 @@ I wanted a concrete way to show how requirements become executable verification.
 ## Architecture
 ```mermaid
 flowchart LR
-    A[manifest.yaml] --> B[Python runner]
+    A[manifest.json] --> B[Python runner]
     B --> C[Compile C target]
     C --> D[Execute verification cases]
     D --> E[Coverage map + report]
@@ -27,8 +27,7 @@ flowchart LR
 
 ## Tech stack
 - Python
-- YAML
-- pytest
+- Standard library
 - C
 - gcc/clang
 

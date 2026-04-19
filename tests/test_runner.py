@@ -15,7 +15,7 @@ class TestRunner(unittest.TestCase):
             cwd=repo_root,
             check=True,
         )
-        report = execute(repo_root / "data/manifest.yaml")
+        report = execute(repo_root / "data/manifest.json")
         self.assertEqual(report["summary"]["total"], 3)
         self.assertEqual(report["summary"]["passed"], 3)
         self.assertIn("SYS-001", report["coverage"])

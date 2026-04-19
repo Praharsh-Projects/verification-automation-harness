@@ -12,4 +12,4 @@ test:
 	$(PYTHON) -m unittest discover -s tests -p 'test_*.py'
 
 run:
-	$(PYTHON) -m verify.runner --manifest data/manifest.yaml
+	$(PYTHON) -m verify.runner --manifest data/manifest.json
